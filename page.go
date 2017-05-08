@@ -413,6 +413,7 @@ func (p Page) Content() Content {
 
 	var text []Text
 	showText := func(s string) {
+		s = s + "\n"
 		n := 0
 		for _, ch := range enc.Decode(s) {
 			Trm := matrix{{g.Tfs * g.Th, 0, 0}, {0, g.Tfs, 0}, {0, g.Trise, 1}}.mul(g.Tm).mul(g.CTM)
